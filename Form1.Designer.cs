@@ -2,15 +2,17 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        private System.Windows.Forms.ComboBox comboBoxEstado;
+        private System.Windows.Forms.TextBox TextBoxTarea;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasPendientes;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasEnProgreso;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTareasCompletadas;
+        private System.Windows.Forms.Label labelPendientes;
+        private System.Windows.Forms.Label labelEnProgreso;
+        private System.Windows.Forms.Label labelCompletadas;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,78 +22,97 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            comboBoxEstado = new ComboBox();
             TextBoxTarea = new TextBox();
-            ButtonAgregar = new Button();
             flowLayoutPanelTareasPendientes = new FlowLayoutPanel();
-            ButtonEliminarultimatarea = new Button();
+            flowLayoutPanelTareasEnProgreso = new FlowLayoutPanel();
+            flowLayoutPanelTareasCompletadas = new FlowLayoutPanel();
+            labelPendientes = new Label();
+            labelEnProgreso = new Label();
+            labelCompletadas = new Label();
             SuspendLayout();
+            // 
+            // comboBoxEstado
+            // 
+            comboBoxEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEstado.FormattingEnabled = true;
+            comboBoxEstado.Location = new Point(12, 12);
+            comboBoxEstado.Name = "comboBoxEstado";
+            comboBoxEstado.Size = new Size(150, 28);
+            comboBoxEstado.TabIndex = 0;
             // 
             // TextBoxTarea
             // 
-            TextBoxTarea.Font = new Font("Consolas", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TextBoxTarea.Location = new Point(40, 24);
+            TextBoxTarea.Location = new Point(170, 12);
             TextBoxTarea.Name = "TextBoxTarea";
-            TextBoxTarea.PlaceholderText = "Ingrese su tarea";
-            TextBoxTarea.Size = new Size(281, 29);
-            TextBoxTarea.TabIndex = 0;
-            // 
-            // ButtonAgregar
-            // 
-            ButtonAgregar.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonAgregar.Location = new Point(378, 22);
-            ButtonAgregar.Name = "ButtonAgregar";
-            ButtonAgregar.Size = new Size(126, 29);
-            ButtonAgregar.TabIndex = 1;
-            ButtonAgregar.Text = "Agregar";
-            ButtonAgregar.UseVisualStyleBackColor = true;
-            ButtonAgregar.Click += ButtonAgregar_Click;
+            TextBoxTarea.Size = new Size(250, 27);
+            TextBoxTarea.TabIndex = 1;
             // 
             // flowLayoutPanelTareasPendientes
             // 
-            flowLayoutPanelTareasPendientes.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanelTareasPendientes.Location = new Point(40, 82);
+            flowLayoutPanelTareasPendientes.Location = new Point(12, 66);
             flowLayoutPanelTareasPendientes.Name = "flowLayoutPanelTareasPendientes";
-            flowLayoutPanelTareasPendientes.Size = new Size(281, 345);
-            flowLayoutPanelTareasPendientes.TabIndex = 2;
+            flowLayoutPanelTareasPendientes.Size = new Size(150, 298);
+            flowLayoutPanelTareasPendientes.TabIndex = 3;
             // 
-            // ButtonEliminarultimatarea
+            // flowLayoutPanelTareasEnProgreso
             // 
-            ButtonEliminarultimatarea.Location = new Point(378, 82);
-            ButtonEliminarultimatarea.Name = "ButtonEliminarultimatarea";
-            ButtonEliminarultimatarea.Size = new Size(126, 29);
-            ButtonEliminarultimatarea.TabIndex = 3;
-            ButtonEliminarultimatarea.Text = "Eliminar Tarea";
-            ButtonEliminarultimatarea.UseVisualStyleBackColor = true;
-            ButtonEliminarultimatarea.Click += ButtonEliminarultimaterea_Click;
+            flowLayoutPanelTareasEnProgreso.Location = new Point(170, 66);
+            flowLayoutPanelTareasEnProgreso.Name = "flowLayoutPanelTareasEnProgreso";
+            flowLayoutPanelTareasEnProgreso.Size = new Size(150, 298);
+            flowLayoutPanelTareasEnProgreso.TabIndex = 4;
+            // 
+            // flowLayoutPanelTareasCompletadas
+            // 
+            flowLayoutPanelTareasCompletadas.Location = new Point(330, 66);
+            flowLayoutPanelTareasCompletadas.Name = "flowLayoutPanelTareasCompletadas";
+            flowLayoutPanelTareasCompletadas.Size = new Size(150, 298);
+            flowLayoutPanelTareasCompletadas.TabIndex = 5;
+            // 
+            // labelPendientes
+            // 
+            labelPendientes.AutoSize = true;
+            labelPendientes.Location = new Point(12, 378);
+            labelPendientes.Name = "labelPendientes";
+            labelPendientes.Size = new Size(102, 20);
+            labelPendientes.TabIndex = 6;
+            labelPendientes.Text = "Pendientes (0)";
+            // 
+            // labelEnProgreso
+            // 
+            labelEnProgreso.AutoSize = true;
+            labelEnProgreso.Location = new Point(12, 398);
+            labelEnProgreso.Name = "labelEnProgreso";
+            labelEnProgreso.Size = new Size(110, 20);
+            labelEnProgreso.TabIndex = 7;
+            labelEnProgreso.Text = "En Progreso (0)";
+            // 
+            // labelCompletadas
+            // 
+            labelCompletadas.AutoSize = true;
+            labelCompletadas.Location = new Point(12, 418);
+            labelCompletadas.Name = "labelCompletadas";
+            labelCompletadas.Size = new Size(99, 20);
+            labelCompletadas.TabIndex = 8;
+            labelCompletadas.Text = "Finalizado (0)";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(ButtonEliminarultimatarea);
-            Controls.Add(flowLayoutPanelTareasPendientes);
-            Controls.Add(ButtonAgregar);
+            ClientSize = new Size(771, 545);
+            Controls.Add(comboBoxEstado);
             Controls.Add(TextBoxTarea);
+            Controls.Add(labelPendientes);
+            Controls.Add(flowLayoutPanelTareasPendientes);
+            Controls.Add(labelEnProgreso);
+            Controls.Add(flowLayoutPanelTareasEnProgreso);
+            Controls.Add(labelCompletadas);
+            Controls.Add(flowLayoutPanelTareasCompletadas);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Gestión de Tareas";
             ResumeLayout(false);
             PerformLayout();
         }
-
-        #endregion
-
-        private TextBox TextBoxTarea;
-        private Button ButtonAgregar;
-        private FlowLayoutPanel flowLayoutPanelTareasPendientes;
-        private Button ButtonEliminarultimatarea;
     }
 }
